@@ -19,16 +19,15 @@
     :root {
       --bg: #0d1018;
       --text: #eef1f6;
-      --muted: #aab1c0;
+      --muted: #d9d4e2;
       --accent: #ffd27a;
-      --line: rgba(255, 255, 255, 0.10);
+      --line: rgba(255, 255, 255, 0.22);
     }
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; }
     body {
-      background:
-        radial-gradient(1200px 600px at 50% -10%, rgba(255, 184, 92, 0.18), transparent 60%),
-        linear-gradient(180deg, #131a2b 0%, var(--bg) 60%);
+      background: linear-gradient(180deg, #1e2250 0%, #34397a 34%, #87597a 72%, #c26e62 100%);
+      background-attachment: fixed;
       color: var(--text);
       font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
@@ -39,12 +38,6 @@
       padding: 48px 20px 80px;
     }
     main { max-width: 560px; text-align: center; }
-    .sun {
-      width: 64px; height: 64px; border-radius: 50%;
-      margin: 0 auto 8px;
-      background: radial-gradient(circle at 50% 50%, #fff 0%, #ffe9b8 45%, #ffb84c 100%);
-      box-shadow: 0 0 28px 6px rgba(255, 184, 76, 0.55), 0 0 70px 10px rgba(255, 184, 76, 0.25);
-    }
     svg.arc { display: block; margin: 0 auto 26px; opacity: 0.85; }
     h1 { font-size: 2.1rem; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 10px; }
     .tagline { color: var(--muted); font-size: 1.05rem; margin: 0 auto 30px; max-width: 420px; }
@@ -58,13 +51,14 @@
 </head>
 <body>
   <main>
-    <div class="sun" aria-hidden="true"></div>
-    <svg class="arc" width="320" height="74" viewBox="0 0 320 74" aria-hidden="true">
-      <line x1="0" y1="52" x2="320" y2="52" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
-      <path d="M 0 64 C 60 64, 90 8, 160 8 C 230 8, 260 64, 320 64"
-            fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2" stroke-linecap="round"/>
-      <circle cx="232" cy="34" r="6" fill="#ffe9b8"/>
-      <circle cx="232" cy="34" r="11" fill="rgba(255,184,76,0.35)"/>
+    <svg class="arc" width="320" height="84" viewBox="0 0 320 84" aria-hidden="true">
+      <line x1="0" y1="56" x2="320" y2="56" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+      <path d="M 0 70 C 60 70, 90 12, 160 12 C 230 12, 260 70, 320 70"
+            fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="252" cy="56" r="22" fill="rgba(255,184,76,0.18)"/>
+      <circle cx="252" cy="56" r="13" fill="rgba(255,200,110,0.38)"/>
+      <circle cx="252" cy="56" r="7" fill="#ffe9b8"/>
+      <circle cx="252" cy="56" r="4.5" fill="#fff6e0"/>
     </svg>
     <h1>Simply Sun</h1>
     <p class="tagline">The sun as a single beautiful arc — rise, solar noon, set, and the live sky, on iPhone and Apple&nbsp;Watch.</p>
